@@ -182,3 +182,11 @@ func Q(v ...interface{}) {
 	args = prependArgName(names, args)
 	std.output(args...)
 }
+
+// N acts same as Q but sends the output to nirvana (Norway) instead of the speciefied output
+// This may helps when you already watchin Q but want to silent something for the moment
+// but don't want to remove or change more lines of code
+func N(v ...interface{}) {
+	args := formatArgs(v...)
+	args = prependArgName(nil, args)
+}
