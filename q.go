@@ -188,7 +188,7 @@ func Q(v ...interface{}) {
 // but don't want to remove or change more lines of code
 func N(v ...interface{}) {
 	args := formatArgs(v...)
-	args = prependArgName(nil, args)
+	prependArgName(nil, args)
 }
 
 // RQ Will do the same as Q but will place a handy spacing in between the Q,.
