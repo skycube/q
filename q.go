@@ -190,3 +190,12 @@ func N(v ...interface{}) {
 	args := formatArgs(v...)
 	args = prependArgName(nil, args)
 }
+
+// RQ Will do the same as Q but will place a handy spacing in between the Q,.
+func RQ(v ...interface{}) {
+	std.output(
+		"############################################\n",
+	"##############     SPACING      ############\n",
+	"############################################\n")
+	Q(v)
+}
